@@ -2,14 +2,14 @@ import React from 'react';
 import { FaCloudRain, FaUmbrella, FaChartLine, FaMobileAlt, FaBell, FaShieldAlt } from 'react-icons/fa';
 
 const LandingPage = () => {
-  // Calm color scheme
+
   const colors = {
-    primary: '#3b82f6', // Blue
-    secondary: '#60a5fa', // Lighter blue
-    accent: '#1e40af', // Darker blue
-    background: '#f0f9ff', // Very light blue background
-    text: '#1e293b', // Dark slate for text
-    lightText: '#64748b', // Lighter text color
+    primary: '#3b82f6', 
+    secondary: '#60a5fa',
+    accent: '#1e40af', 
+    background: '#f0f9ff', 
+    text: '#1e293b',
+    lightText: '#64748b',
     white: '#ffffff',
   };
 

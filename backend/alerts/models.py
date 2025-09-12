@@ -1,4 +1,3 @@
-# alerts/models.py
 from django.db import models
 from django.conf import settings
 from weather.models import Station
@@ -6,7 +5,6 @@ from weather.models import Station
 class AlertRule(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     station = models.ForeignKey(Station, on_delete=models.CASCADE)
-    # thresholds: user sets any or multiple fields
     rain_probability_threshold = models.FloatField(null=True, blank=True, help_text='0-100 percent')
     wind_speed_threshold = models.FloatField(null=True, blank=True, help_text='m/s')
     is_active = models.BooleanField(default=True)
