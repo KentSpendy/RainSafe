@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaCloudRain, FaUmbrella, FaChartLine, FaMobileAlt, FaBell, FaShieldAlt } from 'react-icons/fa';
 import landing from '../images/landing.jpg';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
 
@@ -52,30 +53,34 @@ const LandingPage = () => {
               RainSafe provides timely weather alerts and monitoring to keep you and your loved ones protected from unexpected weather conditions.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <button
-                className="px-6 py-3 rounded-md text-lg font-medium transition-colors cursor-pointer"
-                style={{ backgroundColor: colors.primary, color: colors.white }}
-                onMouseEnter={e => e.currentTarget.style.backgroundColor = colors.secondary}
-                onMouseLeave={e => e.currentTarget.style.backgroundColor = colors.primary}
-              >
-                Login
-              </button>
-              <button
-                className="border px-6 py-3 rounded-md text-lg font-medium transition-colors"
-                style={{ borderColor: colors.primary, color: colors.primary, backgroundColor: colors.white }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.backgroundColor = colors.lightAccent;
-                  e.currentTarget.style.color = colors.secondary;
-                  e.currentTarget.style.borderColor = colors.secondary;
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.backgroundColor = colors.white;
-                  e.currentTarget.style.color = colors.primary;
-                  e.currentTarget.style.borderColor = colors.primary;
-                }}
-              >
-                Learn More
-              </button>
+              <Link to="/login">
+                <button
+                  className="px-6 py-3 rounded-md text-lg font-medium transition-colors cursor-pointer"
+                  style={{ backgroundColor: colors.primary, color: colors.white }}
+                  onMouseEnter={e => e.currentTarget.style.backgroundColor = colors.secondary}
+                  onMouseLeave={e => e.currentTarget.style.backgroundColor = colors.primary}
+                >
+                  Login
+                </button>
+              </Link>
+              <Link to="/signup">
+                <button
+                  className="border px-6 py-3 rounded-md text-lg font-medium transition-colors"
+                  style={{ borderColor: colors.primary, color: colors.primary, backgroundColor: colors.white }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.backgroundColor = colors.lightAccent;
+                    e.currentTarget.style.color = colors.secondary;
+                    e.currentTarget.style.borderColor = colors.secondary;
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.backgroundColor = colors.white;
+                    e.currentTarget.style.color = colors.primary;
+                    e.currentTarget.style.borderColor = colors.primary;
+                  }}
+                >
+                  Learn More
+                </button>
+              </Link>
             </div>
           </div>
           <div className="md:w-1/2">
