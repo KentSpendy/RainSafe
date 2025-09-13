@@ -5,7 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#006400', // Green
+        secondary: '#008000', // Lighter green
+        accent: '#FFD700', // Yellow
+        background: '#F8F8F0', // Very light yellow-white background
+        text: '#333333', // Dark text
+        lightText: '#666666', // Lighter text color
+        white: '#ffffff',
+        lightAccent: '#FFECB3' // Light yellow for better contrast on dark backgrounds
+      },
+    },
   },
   plugins: [],
 }
